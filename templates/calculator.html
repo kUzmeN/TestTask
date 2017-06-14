@@ -1,0 +1,90 @@
+<div ng-controller="CalculatorController as calcCtrl" ng-init="calcCtrl.loadProducts()">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Название и размер (продаваемого продукта)</th>
+            <th>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span ng-if="calcCtrl.selectedProduct == null">Выбрать продукт</span>
+                        <span ng-if="calcCtrl.selectedProduct != null">{{calcCtrl.selectedProduct.name}}</span>
+                    </button>
+                    <div class="dropdown-menu" ng-if="calcCtrl.products.length > 0">
+                        <a class="dropdown-item" ng-repeat="product in calcCtrl.products"
+                           ng-click="calcCtrl.setSelectedProduct(product.name)">{{product.name}}</a>
+                    </div>
+                </div>
+            </th>
+            <th>ТxШxД | тип</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Толщина (продаваемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.thickness" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>мм</td>
+        </tr>
+        <tr>
+            <td>Ширина (продаваемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.width" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>мм</td>
+        </tr>
+        <tr>
+            <td>Длинна (продаваемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.length" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>мм</td>
+        </tr>
+        <tr>
+            <td>Толщина (закупаемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.thick_real" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>мм</td>
+        </tr>
+        <tr>
+            <td>Ширина (закупаемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.width_real" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>мм</td>
+        </tr>
+        <tr>
+            <td>Длинна (закупаемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.length_real" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>мм</td>
+        </tr>
+        <tr>
+            <td>Кубатура загружаемая в авто в Литву</td>
+            <td><input ng-model="calcCtrl.selectedProduct.m3" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>m3</td>
+        </tr>
+        <tr>
+            <td>Закупочная цена</td>
+            <td><input ng-model="calcCtrl.selectedProduct.push_price" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>EUR</td>
+        </tr>
+        <tr>
+            <td>Деффект % (закупаемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.deffect_percent" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>%</td>
+        </tr>
+        <tr>
+            <td>Цена деффекта (закупаемого продукта)</td>
+            <td><input ng-model="calcCtrl.selectedProduct.deffect_cost" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>EUR</td>
+        </tr>
+        <tr>
+            <td>Транспорт в Литву</td>
+            <td><input ng-model="calcCtrl.selectedProduct.logistic" ng-change="calcCtrl.calculatePrices()"></td>
+            <td>EUR</td>
+        </tr>
+        <tr>
+            <td>Полная закупочная цена за м3</td>
+            <td>{{calcCtrl.fullPriceForCube}}</td>
+            <td>EUR/m3</td>
+        </tr>
+        <tr>
+            <td>Полная закупочная цена</td>
+            <td>{{calcCtrl.fullPrice}}</td>
+            <td>EUR</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "97x97x4000 | brusas",
+    "thickness": 97,
+    "width": 97,
+    "length": 4000,
+    "thick_real": 91,
+    "width_real": 91,
+    "length_real": 4000,
+    "m3": 27,
+    "push_price": 125,
+    "deffect_percent": 0,
+    "deffect_cost": 0,
+    "logistic": 500
+  },
+  {
+    "name": "75x75x4000 | brusas",
+    "thickness": 75,
+    "width": 75,
+    "length": 4000,
+    "thick_real": 70,
+    "width_real": 70,
+    "length_real": 4000,
+    "m3": 27,
+    "push_price": 125,
+    "deffect_percent": 0,
+    "deffect_cost": 0,
+    "logistic": 500
+  },
+  {
+    "name": "16x100x4000 | lentele",
+    "thickness": 16,
+    "width": 100,
+    "length": 4000,
+    "thick_real": 14,
+    "width_real": 95,
+    "length_real": 4000,
+    "m3": 27,
+    "push_price": 130,
+    "deffect_percent": 0,
+    "deffect_cost": 0,
+    "logistic": 500
+  },
+  {
+    "name": "19x100x4000 | lentele",
+    "thickness": 19,
+    "width": 100,
+    "length": 4000,
+    "thick_real": 17,
+    "width_real": 95,
+    "length_real": 4000,
+    "m3": 27,
+    "push_price": 95,
+    "deffect_percent": 0,
+    "deffect_cost": 0,
+    "logistic": 450
+  },
+  {
+    "name": "25x100x4000 | lentele",
+    "thickness": 25,
+    "width": 100,
+    "length": 4000,
+    "thick_real": 22,
+    "width_real": 95,
+    "length_real": 4000,
+    "m3": 27,
+    "push_price": 95,
+    "deffect_percent": 0,
+    "deffect_cost": 0,
+    "logistic": 450
+  }
+]
